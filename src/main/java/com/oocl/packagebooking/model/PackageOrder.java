@@ -14,7 +14,6 @@ public class PackageOrder {
     @Id
     private String id;
 
-    @NotBlank
     private String owner;
 
     private String phone;
@@ -22,6 +21,8 @@ public class PackageOrder {
     private String status;
 
     private Date bookingTime;
+
+    private double weight;
 
     public String getId() {
         return id;
@@ -61,5 +62,13 @@ public class PackageOrder {
 
     public void setBookingTime(Date bookingTime) {
         this.bookingTime = bookingTime;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 }
