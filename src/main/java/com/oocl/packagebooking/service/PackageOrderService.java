@@ -36,7 +36,7 @@ public class PackageOrderService {
 
     public PackageOrder setBookingTime(String id, String time) {
         PackageOrder packageOrder = packageOrderRepository.findById(id).get();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-DD-mm HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
             packageOrder.setBookingTime(sdf.parse(time));
             packageOrderRepository.saveAndFlush(packageOrder);
